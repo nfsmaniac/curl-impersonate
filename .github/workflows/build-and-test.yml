@@ -56,9 +56,9 @@ jobs:
           #   capture_interface: eth0
           #   zigflags: -target i386-linux-musl -fPIC -mno-outline-atomics
           - arch: arm
-            host: arm-linux-musleabihf
+            host: arm-linux-musl
             capture_interface: eth0
-            zigflags: -target arm-linux-musleabihf -mcpu=cortex_a53 -fPIC
+            zigflags: -target arm-linux-musl -fPIC
           - arch: arm
             host: arm-linux-gnueabihf
             capture_interface: eth0
