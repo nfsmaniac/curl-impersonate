@@ -80,7 +80,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install build-essential pkg-config cmake ninja-build curl autoconf automake libtool
-          sudo apt-get install gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf gcc-arm-linux-musleabihf gcc-riscv64-linux-gnu
+          sudo apt-get install gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf musl-dev gcc-riscv64-linux-gnu
           sudo apt-get install golang-go
           # Needed to compile 'minicurl'
           sudo apt-get install libcurl4-openssl-dev
