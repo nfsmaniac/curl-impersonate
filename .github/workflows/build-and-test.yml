@@ -56,6 +56,10 @@ jobs:
           #   capture_interface: eth0
           #   zigflags: -target i386-linux-musl -fPIC -mno-outline-atomics
           - arch: arm
+            host: arm-linux-musleabihf
+            capture_interface: eth0
+            zigflags: -target arm-linux-musleabihf -mcpu=cortex_a53 -fPIC
+          - arch: arm
             host: arm-linux-gnueabihf
             capture_interface: eth0
             zigflags: -target arm-linux-gnueabihf.2.17 -mcpu=arm1176jzf_s
@@ -76,7 +80,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install build-essential pkg-config cmake ninja-build curl autoconf automake libtool
-          sudo apt-get install gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf gcc-riscv64-linux-gnu
+          sudo apt-get install gcc-aarch64-linux-gnu gcc-arm-linux-gnueabihf gcc-arm-linux-musleabihf gcc-riscv64-linux-gnu
           sudo apt-get install golang-go
           # Needed to compile 'minicurl'
           sudo apt-get install libcurl4-openssl-dev
